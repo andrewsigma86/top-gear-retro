@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Gear Retro Racing</title>
+    <link rel="stylesheet" href="topgear.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>⚡ TOP GEAR ⚡</h1>
+            <div class="stats">
+                <span>Puntos: <span id="score">0</span></span>
+                <span>Vidas: <span id="lives">3</span></span>
+            </div>
+        </div>
+        
+        <div id="game-area">
+            <div id="road"></div>
+            <div id="player"></div>
+        </div>
+        
+        <div class="controls">
+            <p>🕹️ Usa los botones o las flechas para mover el coche</p>
+            <div class="control-buttons">
+                <button id="left-btn" class="arrow-btn">←</button>
+                <button id="start-btn" class="start-btn">INICIAR</button>
+                <button id="right-btn" class="arrow-btn">→</button>
+            </div>
+        </div>
+        
+        <div id="game-over" class="hidden">
+            <h2>¡GAME OVER!</h2>
+            <p>Puntuación final: <span id="final-score">0</span></p>
+            <button id="restart-btn">REINTENTAR</button>
+        </div>
+    </div>
+
+    <!-- Elementos de audio - Agrega tus archivos aquí -->
+    <!-- Música de fondo -->
+    <audio id="bg-music" loop>
+         <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Sonido del motor -->
+    <audio id="engine-sound" loop>
+         <source src="engine-sound.mp3" type="audio/mpeg"> 
+    </audio>
+    
+    <!-- Sonido de choque -->
+    <audio id="crash-sound">
+         <source src="crash-sound.mp3" type="audio/mpeg"> 
+    </audio>
+    
+    <!-- Sonido de game over -->
+    <audio id="game-over-sound">
+         <source src="game-over-sound.mp3" type="audio/mpeg"> 
+    </audio>
+
+    <script src="topgear.js"></script>
+</body>
+</html>
